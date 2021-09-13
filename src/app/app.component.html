@@ -1,0 +1,32 @@
+<nav class="navbar navbar-dark bg-primary">
+  <a class="navbar-brand" routerLink="/">
+    <b>MedTrace</b>
+  </a>
+
+  <div>
+    <button routerLink="/new/transaction/pending" class="btn btn-outline-light" *ngIf="thereArePendingTransactions()">
+      Pending transactions
+      <span class="badge badge-light">{{blockchain.pendingTransactions.length}}</span>
+    </button>
+    &nbsp;
+    <button routerLink="/settings" class="btn btn-outline-light">
+      Settings
+    </button>
+    &nbsp;
+    <button routerLink="/new/transaction" class="btn btn-outline-light">
+      Create transaction
+    </button>
+    &nbsp;
+    <button routerLink="/scan" class="btn btn-outline-light">
+      Scan
+    </button>
+  </div>
+</nav>
+
+<br>
+
+
+
+<router-outlet></router-outlet>
+
+
