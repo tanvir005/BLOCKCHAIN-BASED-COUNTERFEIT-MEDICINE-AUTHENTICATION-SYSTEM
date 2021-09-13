@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Scanning</h1>
+    <br>
+
+	
+
+  
+    <div class="form-group">
+	    <label for="code">Identity Code</label>
+	    <input type="text" class="form-control" id="code" aria-describedby="toAddressHelp" #box>
+	    <small id="toAddressHelp" class="form-text text-muted">
+	    	Identity Code of the medicine.
+	    </small>
+  	</div>
+
+  	<button (click)="getVal(box.value)" type="submit" class="btn btn-primary">Search</button>
+
+	<h1>Transactions</h1>
+	
+	<app-transactions-table
+		[transactions]="blocks"
+	></app-transactions-table>
+
+  
+  </div>
+  
